@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BomenMon.be</title>
+  <meta name="description" content="BomenMon – contact: 0474 04 04 32, info@bomenmon.be">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #006633;
+      --green-dark: #044022;
+      --cream: #f6f6e9;
+      --orange: #db661d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Poppins", system-ui, sans-serif;
+      background: var(--cream);
+      color: #000;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    .display {
+      font-family: "Oswald", "Arial Narrow", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    /* Hero */
+    #home {
+      background: var(--green);
+      min-height: 100vh;
+      min-height: 100svh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 16px 120px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: clamp(8px, 2vw, 24px);
+    }
+    .brand img { height: clamp(100px, 28vw, 320px); width: auto; }
+    .brand h1 {
+      color: var(--cream);
+      font-size: clamp(3rem, 15vw, 10.5rem);
+      letter-spacing: 0.01em;
+    }
+    .brand h1 span { display: block; }
+    .scroll-down {
+      position: absolute;
+      left: 50%;
+      bottom: 64px;
+      transform: translateX(-50%);
+      width: 48px;
+    }
+    .scroll-down img { transform: rotate(90deg); width: 48px; }
+
+    /* Contact */
+    #contact {
+      position: relative;
+      min-height: 716px;
+      padding: 48px 16px 64px;
+      overflow: hidden;
+    }
+    #contact .inner { max-width: 1024px; margin: 0 auto; position: relative; z-index: 1; }
+    #contact h2 {
+      color: var(--green-dark);
+      font-size: clamp(4rem, 10vw, 6.5rem);
+      margin-left: clamp(0px, 8vw, 87px);
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+      width: 207px;
+      margin: 36px 0 0 clamp(0px, 20vw, 209px);
+    }
+    .pill {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 43px;
+      border-radius: 999px;
+      background: var(--orange);
+      color: var(--cream);
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 1.15rem;
+      transition: background .15s;
+    }
+    .pill.small { font-size: 0.98rem; }
+    .pill:hover { background: #c2571a; }
+    .vat {
+      position: absolute;
+      right: clamp(16px, 15vw, 150px);
+      bottom: 60px;
+      font-size: 1.13rem;
+      z-index: 1;
+    }
+    .tree {
+      position: absolute;
+      right: clamp(-120px, -9vw, 0px);
+      top: 180px;
+      width: clamp(260px, 47vw, 485px);
+      pointer-events: none;
+    }
+
+    @media (max-width: 640px) {
+      #contact { min-height: 640px; }
+      .buttons { margin: 32px auto 0; gap: 32px; }
+      #contact h2 { margin-left: 0; text-align: center; }
+      .tree { opacity: .35; right: -60px; top: 160px; }
+      .vat { left: 0; right: 0; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <section id="home">
+    <div class="brand">
+      <img src="assets/logo-tree.svg" alt="" width="286" height="437">
+      <h1 class="display"><span>Bomen</span><span>Mon</span></h1>
+    </div>
+    <a class="scroll-down" href="#contact" aria-label="Naar contact">
+      <img src="assets/arrow-down.svg" alt="" width="47" height="41">
+    </a>
+  </section>
+
+  <section id="contact">
+    <div class="inner">
+      <h2 class="display">Contact</h2>
+      <div class="buttons">
+        <a class="pill" href="tel:+32474040432">0474 04 04 32</a>
+        <a class="pill small" href="mailto:info@bomenmon.be">info@bomenmon.be</a>
+      </div>
+    </div>
+    <img class="tree" src="assets/logo-mark.svg" alt="" width="466" height="437">
+    <p class="vat">BE 0672.795.067</p>
+  </section>
+</body>
+</html>
